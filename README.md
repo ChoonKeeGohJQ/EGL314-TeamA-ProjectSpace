@@ -2,7 +2,7 @@
 
 ```mermaid
 stateDiagram
-    [*] --> Team_Lead
+    [*] --> Team_Lead [add members]
     Team_Lead --> [*]
 
     Team_Lead --> Team_Members
