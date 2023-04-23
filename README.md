@@ -2,11 +2,11 @@
 
 ```mermaid
 stateDiagram
-    [*] --> TeamLead
-    TeamLead --> [*]
+    [*] --> Team Lead
+    Team Lead --> [*]
 
-    TeamLead --> TeamMembers
-    TeamMembers --> TeamLead
-    TeamMembers --> TrackOwnTasks
-    TrackOwnTasks --> [*]
+    Team Lead --> Team Members
+    Team Members --> Team Lead
+    Team Members --> Track Own Tasks
+    Track Own Tasks --> [*]
 ```
