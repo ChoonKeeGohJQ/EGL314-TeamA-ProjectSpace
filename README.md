@@ -23,7 +23,7 @@ This is a sample code block
 ```
 ## Game Ideas
 *Reference link :https://www.youtube.com/watch?v=3QKiK4rJIB0*
-
+https://www.create-learn.us/blog/easy-games-to-code/
 
 ## Video Ideas
 
