@@ -1,12 +1,12 @@
 # EGL314-TeamA-ProjectSpace
 *Scrum link : https://docs.google.com/spreadsheets/d/1K91aIip-ZL4T0M8RgZgr2uuCa6e8iVZyCFgKndAOjxg/edit?usp=sharing*
 
-*Slides link : *
+*Slides link : https://docs.google.com/presentation/d/1gpmwZyzl72j914PGxcWpIQM8QkVoPqJsxVBmEhtlBfE/edit
 ## Team composition and roles
 Team Lead : Yi Shan
 Asst Team Lead : Choon Kee
 Video : Yi Mon
-Coding : Thinesh & Aloysius
+Programming : Thinesh & Aloysius
 ## Storyboard
 
 ## Floor Plan
