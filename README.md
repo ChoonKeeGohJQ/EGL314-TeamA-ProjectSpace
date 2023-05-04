@@ -2,29 +2,21 @@
 *Scrum link : https://docs.google.com/spreadsheets/d/1K91aIip-ZL4T0M8RgZgr2uuCa6e8iVZyCFgKndAOjxg/edit?usp=sharing*
 
 *Slides link : https://docs.google.com/presentation/d/1gpmwZyzl72j914PGxcWpIQM8QkVoPqJsxVBmEhtlBfE/edit*
-## Team composition and roles
-Team Lead : Yi Shan
-Asst Team Lead : Choon Kee
-Video : Yi Mon
-Programming : Thinesh & Aloysius
+
+*Written Report Link : https://docs.google.com/document/d/1gszVM6rCdHKReCZtBvsyL3v9zL2XTi-JtCO33BfkIzI/edit#*
+
+## Team composition and roles:
+- Team Lead : Yi Shan
+- Asst Team Lead : Choon Kee
+- Video : Yi Mon
+- Programming : Thinesh & Aloysius
 ## Storyboard
 
 ## Floor Plan
 ![Floorplan](imgs\floorplan.jpg)
 
-# System Diagrams 
-
+# System Diagrams
 ## Video
-```mermaid
-graph LR
-Laptop --> B[Media Server] --> C[HDMI Extender Tx]
-C --> D[HDMI Extender Rx] --> Projector
-```
-## Audio
-
-## Control
-
-### Video
 ```mermaid
 graph LR
 Laptop --> B[Media Server]
@@ -32,9 +24,14 @@ B --> C[HDMI Extender TX]
 C --> D[HDMI Extender RX]
 D --> E[Projector]
 ```
-### Audio
-
-### Control
+## Audio
+```mermaid
+graph LR
+Laptop --> F[Amp]
+F --> A[Ceiling Speaker 1]
+F --> B[Ceiling Speaker 2]
+```
+## Control
 
 ## Research 
 
