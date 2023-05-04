@@ -14,6 +14,18 @@ Programming : Thinesh & Aloysius
 
 ## System Diagrams 
 
+### Video
+```mermaid
+graph LR
+Laptop --> B[Media Server]
+B --> C[HDMI Extender TX]
+C --> D[HDMI Extender RX]
+D --> E[Projector]
+```
+### Audio
+
+### Control
+
 ## Research 
 
 ## Codes
