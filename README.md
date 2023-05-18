@@ -1,18 +1,37 @@
 # EGL314-TeamA-ProjectSpace
 *Scrum link : https://docs.google.com/spreadsheets/d/1K91aIip-ZL4T0M8RgZgr2uuCa6e8iVZyCFgKndAOjxg/edit?usp=sharing*
 
-*Slides link : *
-## Team composition and roles
-Team Lead : Yi Shan
-Asst Team Lead : Choon Kee
-Video : Yi Mon
-Coding : Thinesh & Aloysius
+*Slides link : https://docs.google.com/presentation/d/1gpmwZyzl72j914PGxcWpIQM8QkVoPqJsxVBmEhtlBfE/edit*
+
+*Written Report Link : https://docs.google.com/document/d/1gszVM6rCdHKReCZtBvsyL3v9zL2XTi-JtCO33BfkIzI/edit#*
+
+## Team composition and roles:
+- Team Lead : Yi Shan
+- Asst Team Lead : Choon Kee
+- Video : Yi Mon
+- Programming : Thinesh & Aloysius
 ## Storyboard
 
 ## Floor Plan
-![Alt text](imgs\floorplan.jpg)
+![Floorplan](imgs\floorplan.jpg)
 
-## System Diagrams 
+# System Diagrams
+## Video
+```mermaid
+graph LR
+Laptop --> B[Media Server]
+B --> C[HDMI Extender TX]
+C --> D[HDMI Extender RX]
+D --> E[Projector]
+```
+## Audio
+```mermaid
+graph LR
+Laptop --> F[Amp]
+F --> A[Ceiling Speaker 1]
+F --> B[Ceiling Speaker 2]
+```
+## Control
 
 ## Research 
 
@@ -22,11 +41,9 @@ This is a sample code block
 
 ```
 ## Game Ideas
-*Reference link :https://www.youtube.com/watch?v=3QKiK4rJIB0*
-https://www.create-learn.us/blog/easy-games-to-code/
-
-## Video Ideas
-
+Reference links : 
+- https://www.youtube.com/watch?v=3QKiK4rJIB0
+- https://www.create-learn.us/blog/easy-games-to-code/
 
 ```mermaid
 stateDiagram
