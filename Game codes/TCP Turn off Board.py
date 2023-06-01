@@ -3,8 +3,6 @@ import socket
 TCP_IP='192.168.10.10'
 TCP_PORT=5005
 BUFFER_SIZE=1024
-# MESSAGE =b"TCPSend(1,'{wdcustomscriptclick(1)}')!"
-# MESSAGE1 = b"TCPSend(1,'{wdcustomscriptclick(2)}')"
 
 A = [
 b"TCPSend(1,'{wdcustomscriptclick(19)}')!",
