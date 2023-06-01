@@ -32,6 +32,10 @@ b"TCPSend(1,'{wdcustomscriptclick(34)}')!",
 b"TCPSend(1,'{wdcustomscriptclick(35)}')!",
 b"TCPSend(1,'{wdcustomscriptclick(36)}')!"
     ]	#Lines for turning off X
+C = [
+b"TCPSend(1,'{wdcustomscriptclick(38)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(40)}')!"
+    ]   #Lines for turning off winner sign
 
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect((TCP_IP,TCP_PORT))
@@ -41,6 +45,9 @@ for x in A:
     
 for x in B:
     s.send(x)	#Turns all X off
+    
+for x in C:
+    s.send(x)	#Turns all winner signs off
     
 data=s.recv(BUFFER_SIZE)
 s.close()
