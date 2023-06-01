@@ -4,6 +4,11 @@ TCP_IP='192.168.10.10'
 TCP_PORT=5005
 BUFFER_SIZE=1024
 
+# Buttons 1-9 (Turns on O)
+# Buttons 10-18 (Turns on X)
+# Buttons 19-27 (Turns off O)
+# Buttons 28-36 (Turns off X)
+
 A = [
 b"TCPSend(1,'{wdcustomscriptclick(19)}')!",
 b"TCPSend(1,'{wdcustomscriptclick(20)}')!",
