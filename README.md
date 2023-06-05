@@ -1,45 +1,28 @@
 # EGL314-TeamA-ProjectSpace
-*Scrum link : https://docs.google.com/spreadsheets/d/1K91aIip-ZL4T0M8RgZgr2uuCa6e8iVZyCFgKndAOjxg/edit?usp=sharing*
+*Scrum link : https://docs.google.com/spreadsheets/d/1Y40r6qJjn5tQYjjeAGe3VWtMS32XYPxb/edit#gid=1207868931*
 
-*Slides link : https://docs.google.com/presentation/d/1gpmwZyzl72j914PGxcWpIQM8QkVoPqJsxVBmEhtlBfE/edit*
+*Slides link : https://docs.google.com/presentation/d/1O2Y1NUDbdvvYAoqxe3N-KlBIkQF81HuC/edit*
 
-*Written Report Link : https://docs.google.com/document/d/1gszVM6rCdHKReCZtBvsyL3v9zL2XTi-JtCO33BfkIzI/edit#*
+*Written Report Link : https://docs.google.com/document/d/1O2XtJwMNwenmRVS2893oCQq5SGyDaGZ7/edit*
 
 ## Team composition and roles:
 - Team Lead : Yi Shan
 - Asst Team Lead : Choon Kee
 - Video : Yi Mon
 - Programming : Thinesh & Aloysius
+
 ## Storyboard
 
 ## Floor Plan
-![Floorplan](imgs\floorplan.jpg)
+![Floorplan](imgs/floorplan.png)
 
 # System Diagrams
 ## Video
-```mermaid
-graph LR
-Laptop --> B[Media Server]
-B --> C[HDMI Extender TX]
-C --> D[HDMI Extender RX]
-D --> E[Projector]
-```
+![VideoDiagram](imgs/videodiag.png)
+
 ## Audio
-```mermaid
-graph LR
-Laptop --> F[Amp]
-F --> A[Ceiling Speaker 1]
-F --> B[Ceiling Speaker 2]
-```
-## Control
+![AudioDiagram](imgs/audiodiag.png)
 
-## Research 
-
-## Codes
-```
-This is a sample code block
-
-```
 ## Game Ideas
 Reference links : 
 - https://www.youtube.com/watch?v=3QKiK4rJIB0
