@@ -1,7 +1,12 @@
 # EGL314-TeamA-ProjectSpace
-'''
-
-'''
+```
+#this is a game of tictactoe on a launchpad
+import mido                                                                                                                     
+import socket
+inputport = mido.get_input_names() #get name of device and input port used
+outputport = mido.get_output_names() #get name of device and output port used
+launchpad = 'Launchpad MK2 MIDI 1' #name of launchpad
+```
 #this is a game of tictactoe on a launchpad
 import mido                                                                                                                     
 import socket
