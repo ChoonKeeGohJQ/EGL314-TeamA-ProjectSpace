@@ -1,12 +1,24 @@
 # EGL314-TeamA-ProjectSpace
+
+
+## How to use midi to control midi devices.
+
+1. Library to use.
+-mido
+-rtmidi
+
+
+how to use mido?
+1. import mido library(line 1)
+2. how to detect devices(line 2-3)
+2_1. line 2 and line 3 gives you similar results.
 ```
-#this is a game of tictactoe on a launchpad
 import mido                                                                                                                     
-import socket
 inputport = mido.get_input_names() #get name of device and input port used
 outputport = mido.get_output_names() #get name of device and output port used
-launchpad = 'Launchpad MK2 MIDI 1' #name of launchpad
 ```
+
+
 #this is a game of tictactoe on a launchpad
 import mido                                                                                                                     
 import socket
