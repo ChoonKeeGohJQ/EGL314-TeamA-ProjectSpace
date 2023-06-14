@@ -301,4 +301,25 @@ while True:
                 if btn_state.count(1) != count :
                     count +=1
                     
- 
+                   
+ # Bill Of Material (BOM)
+
+ 1. 1x Midi Pad Novation Launchpad
+ 2. 2x Raspberry Pi Raspi 4 Model B
+ 3. 1x Short Throw Projector Sony VPL-SW630
+ 4. 1x Media Server Lenovo ThinkStation P920
+ 5. 2x Ceiling Speakers Extron FF 220T
+ 6. 1x Screen OEM
+ 7. 1x Audio Amplifier Extron XPA 1002
+ 8. 1x Laptop HP Zbook 15 G5
+ 9. 1x HDMI Extender TX Kramer PT-571
+ 10. 1x HDMI Extender RX Kramer PT-572+
+ 11. x1 Wireless Router Netgear
+
+ # Required Software
+
+ 1. Christie Pandora Box
+ 2. Thonny Python IDE
+ 3. Dongle for pandora license 
+
+ # Network Settings
