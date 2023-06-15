@@ -1,6 +1,161 @@
 # EGL314-TeamA-ProjectSpace
 
 
+
+                   
+ # Bill Of Material (BOM)
+
+ 1. 1x Novation Launchpad Mk2
+ 2. 2x Raspberry Pi Raspi 4 Model B
+ 3. 1x Short Throw Projector Sony VPL-SW630
+ 4. 1x Media Server Lenovo ThinkStation P920
+ 5. 2x Ceiling Speakers Extron FF 220T
+ 6. 1x OEM Screen
+ 7. 1x Audio Amplifier Extron XPA 1002
+ 8. 1x Laptop HP Zbook 15 G5
+ 9. 1x HDMI Extender TX Kramer PT-571
+ 10. 1x HDMI Extender RX Kramer PT-572+
+ 11. 1x Wireless Router Netgear
+
+ # Required Software and Licenses
+
+ 1. Christie Pandora Box
+ 2. Widget Designer
+ 3. Server Manager 
+ 4. Thonny Python IDE
+ 5. Dongles for Pandora license
+
+ # Network Settings
+Login to router
+</br>
+username: admin
+</br>
+Login to router by going to a web browser and entering address 192.168.1.1 under URL section, then sign in with:\
+username: admin\
+password: password
+![Alt text](<imgs/Router login.jpg>)
+Name: TeamA
+</br>
+Password: mtswifipwd
+![Alt text](<imgs/Router wireless setup.jpg>)
+Router IP address set to 192.168.10.1
+![Alt text](<imgs/Router LAN setup.jpg>)
+ # How To Start
+## Video Hardware Setup
+![Alt Text](imgs/VideoHardSetup.jpg)
+The video setup for our project consists of a ultra-short throw projector mounted onto a truss, then secured with a safety cable.
+![Alt Text](imgs/ProjectorMount.jpg)
+The projector is shooting to a OEM Screen, which is placed on the floor.
+![Alt Text](imgs/OemScreen.jpg)
+Video is sent to the projector via HDMI Extender, sending signal from a Media Server.
+![Alt Text](imgs/MediaServer.jpg)
+Hdmi Extenders
+![Alt Text](imgs/Transmitter.jpg)
+
+## Audio Hardware Setup
+![Alt Text](imgs/CeilingSpk.jpg)
+The audio setup for our project consists of an audio amplifier receiving input from a laptop via a 3.5mm cable sending to two ceiling speakers
+![Alt Text](imgs/3.5mm.jpg)
+Amplifier Receiving input from laptop
+![Alt Text](imgs/Amplifier.jpg)
+Speaker cable out from amplifier sending to ceiling speakers
+![Alt Text](imgs/SpkToAmp.jpg)
+
+## Video Software
+For video we are sending content from Pandoras Box to a media server, connected via a LAN cable and controlled by Server Manager, while also being controlled with Widget designer.
+
+Start by Opening your network settings by right-clicking your wifi logo at the bottom right of your screen
+<br>![Alt Text](imgs/Pandora%20Imgs/Open%20network%20settings.png)<br>
+Then, go to Change adapter options
+<br>![Alt Text](imgs/Pandora%20Imgs/Change%20Adapter%20Settings.png)<br>
+Right click Ethernet and open up properties
+<br>![Alt Text](imgs/Pandora%20Imgs/Ethernet.png)<br>
+Then open Internet Protocol Version 4 (TCP/IPv4) properties and set your ip to 192.168.10.10, subnet mask to 255.255.255.0
+<br>![Alt Text](imgs/Pandora%20Imgs/Ipv4.png)<br>
+Now, Open pandora and start a new project
+<br>![Alt Text](imgs/Pandora%20Imgs/NewfilePB.jpg)<br>
+Name your project accordingly
+<br>![Alt Text](imgs/Pandora%20Imgs/Rename.jpg)<br>
+Then, right click your project folder at the left side of the app, and add a new folder. This will be the content folder
+<br>![Alt Text](imgs/Pandora%20Imgs/AddFolder.png)<br>
+To find content, use the navigation tool in the center of the screen, the directory for the downloads folder is (C:/Users/"username"/Downloads), bring in content by dragging content in from the navigation to the previously created content folder.
+<br>![Alt Text](imgs/Pandora%20Imgs/FileDir.png)<br>
+Next, we drag in content from our content to folder directly to our layers.
+<br>![Alt Text](imgs/Pandora%20Imgs/Addimg2Layer.png)<br>
+Then, we position our items in the property editor
+<br>![Alt Text](imgs/Pandora%20Imgs/Positioning.png)<br>
+Next, go to Configuration>Network and check your domain.
+<br>![Alt Text](imgs/Pandora%20Imgs/CheckdomainPB.png)<br>
+Open Server Manager and check if your Media server is connected, if it's not, check your connection between the laptop and the Media Server through your LAN cable. Else, Right click your server in the application and click connect VNC
+<br>![Alt Text](imgs/Pandora%20Imgs/ConnectVNC.png)<br>
+Next, Open Pandoras Box in the Media Server and make sure the domain number matches the one in Pandoras Box in your laptop,
+<br>![Alt Text](imgs/Pandora%20Imgs/Open%20Pandora.png)<br>
+Open Widget Designer and create a new file.
+<br>![Alt Text](imgs/Pandora%20Imgs/FileNew.png)<br>
+Add buttons by going to Widgets>Buttons and clicking CustomScript, this will set you in state where you can only add buttons
+<br>![Alt Text](imgs/Pandora%20Imgs/Addbutton.png)<br>
+Button adding state
+<br>![Alt Text](imgs/Pandora%20Imgs/make%20button.png)<br>
+To exit the button adding state, click the icon selected in the image at the top of the application
+<br>![Alt Text](imgs/Pandora%20Imgs/Esc.jpg)<br>
+At the end, you should have 40 buttons in total
+<br>![Alt Text](imgs/Pandora%20Imgs/Final%20Layout.jpg)<br>
+Double-click the button and change its type to toggle inside Settings and add in codes
+<br>![Alt Text](imgs/Pandora%20Imgs/doubleclick.png)<br>
+
+## The codes to use for buttons are:
+
+### **To toggle the layer's opacity for Player 1**
+Note that X means Device number and Y means layer number
+
+onClick script:
+
+(the portion after changing the opacity is for audio playback)
+```
+DeviceSetParam(X,Y,"Opacity",255)
+DeviceSetParam(X,Y,"Playback Transport","Play")
+WDWait
+(0.5)DeviceSetParam(X,Y,"Playback Transport","Stop")
+```
+
+onRelease script:
+```
+DeviceSetParam(X,Y,"Opacity",0)
+```
+Master script to turn opacity down and release pressed state
+```
+DeviceSetParam(X,Y,"Opacity",0)
+WDCustomScriptSetState(3,"Released")
+```
+
+Next, navigate to Connections>Remoting at the top of the application
+<br>![Alt Text](imgs/Pandora%20Imgs/Remoting.jpg)<br>
+Inside the Remote input control, set your TCP port to 5005 and Enable TCP connection.
+<br>![Alt Text](imgs/Pandora%20Imgs/TCPSet.jpg)<br>
+
+
+## Raspberry Pi
+Download and install raspbian
+![Alt text](<imgs/Raspi Setup/Raspi Setup 1.jpg>)
+Choose the operating system as Raspberry Pi OS (32-bit)
+![Alt text](<imgs/Raspi Setup/Raspi Setup OS.jpg>)
+Choose the storage device, being the SD card that will be used to store data for the Raspberry Pi
+![Alt text](<imgs/Raspi Setup/Raspi Setup Storage.jpg>)
+Pick advanced options, enable hostname and SSH, then enter a hostname of your choosing, in this case, its TeamA2
+![Alt text](<imgs/Raspi Setup/Raspi Setup Advanced 1.jpg>)
+Enable set username and password then create a username and password, in this senario username being TeamA2, password being mtswifipwd
+![Alt text](<imgs/Raspi Setup/Raspi Setup Advanced 2.jpg>)
+Enable Configure wireless LAN and enter the SSID and password according to the SSID and password according what was configured in the netgear router
+![Alt text](<imgs/Raspi Setup/Raspi Setup configure wireless LAN.jpg>)
+Select write
+![Alt text](<imgs/Raspi Setup/Raspi Setup 2.jpg>)
+Note that the SD card will be formatted and everything in it will be erased, do not use a SD card will has data in it
+![Alt text](<imgs/Raspi Setup/Raspi Setup Write Confirmation.jpg>)
+Wait for raspbian to fishing writing
+![Alt text](<imgs/Raspi Setup/Raspi Setup Writing.jpg>)
+Now you can remove the SD card from your laptop and insert it into the raspberry pi
+![Alt text](<imgs/Raspi Setup/Raspi Setup Finished writing.jpg>)
+
 ## Installing neccesary Libraries.
 
 1. Library to use.
@@ -18,9 +173,9 @@ if you are using python verion 3 then use 'pip3' instead of pip
 'pip install python-rtmidi'
 
 4. if installing the library happens to fail, try the following steps.
- - Open Raspberry Pi Configuration 
+ - Open Raspberry Pi Configuration
  - go to Localisation
- - Set Locale,Timezone and Wireless LAN Country to your country.
+ - Set Timezone and Wireless LAN Country to your country.
 
 
 ## TicTacToe with TCP
@@ -308,161 +463,4 @@ while True:
                 DwinCheck(player)
                 if btn_state.count(1) != count :
                     count +=1
-                    
- 
 ```
-                   
- # Bill Of Material (BOM)
-
- 1. 1x Novation Launchpad Mk2
- 2. 2x Raspberry Pi Raspi 4 Model B
- 3. 1x Short Throw Projector Sony VPL-SW630
- 4. 1x Media Server Lenovo ThinkStation P920
- 5. 2x Ceiling Speakers Extron FF 220T
- 6. 1x OEM Screen
- 7. 1x Audio Amplifier Extron XPA 1002
- 8. 1x Laptop HP Zbook 15 G5
- 9. 1x HDMI Extender TX Kramer PT-571
- 10. 1x HDMI Extender RX Kramer PT-572+
- 11. 1x Wireless Router Netgear
-
- # Required Software and Licenses
-
- 1. Christie Pandora Box
- 2. Widget Designer
- 3. Server Manager 
- 4. Thonny Python IDE
- 5. Dongles for Pandora license
-
- # Network Settings
-
-
-Login to router
-</br>
-username: admin
-</br>
-Login to router by going to a web browser and entering address 192.168.1.1 under URL section, then sign in with:\
-username: admin\
-password: password
-![Alt text](<imgs/Router login.jpg>)
-Name: TeamA
-</br>
-Password: mtswifipwd
-![Alt text](<imgs/Router wireless setup.jpg>)
-Router IP address set to 192.168.10.1
-![Alt text](<imgs/Router LAN setup.jpg>)
- # How To Start
-## Video Hardware Setup
-![Alt Text](imgs/VideoHardSetup.jpg)
-The video setup for our project consists of a ultra-short throw projector mounted onto a truss, then secured with a safety cable.
-![Alt Text](imgs/ProjectorMount.jpg)
-The projector is shooting to a OEM Screen, which is placed on the floor.
-![Alt Text](imgs/OemScreen.jpg)
-Video is sent to the projector via HDMI Extender, sending signal from a Media Server.
-![Alt Text](imgs/MediaServer.jpg)
-Hdmi Extenders
-![Alt Text](imgs/Transmitter.jpg)
-
-## Audio Hardware Setup
-![Alt Text](imgs/CeilingSpk.jpg)
-The audio setup for our project consists of an audio amplifier receiving input from a laptop via a 3.5mm cable sending to two ceiling speakers
-![Alt Text](imgs/3.5mm.jpg)
-Amplifier Receiving input from laptop
-![Alt Text](imgs/Amplifier.jpg)
-Speaker cable out from amplifier sending to ceiling speakers
-![Alt Text](imgs/SpkToAmp.jpg)
-
-## Video Software
-For video we are sending content from Pandoras Box to a media server, connected via a LAN cable and controlled by Server Manager, while also being controlled with Widget designer.
-
-Start by Opening your network settings by right-clicking your wifi logo at the bottom right of your screen
-<br>![Alt Text](imgs/Pandora%20Imgs/Open%20network%20settings.png)<br>
-Then, go to Change adapter options
-<br>![Alt Text](imgs/Pandora%20Imgs/Change%20Adapter%20Settings.png)<br>
-Right click Ethernet and open up properties
-<br>![Alt Text](imgs/Pandora%20Imgs/Ethernet.png)<br>
-Then open Internet Protocol Version 4 (TCP/IPv4) properties and set your ip to 192.168.10.10, subnet mask to 255.255.255.0
-<br>![Alt Text](imgs/Pandora%20Imgs/Ipv4.png)<br>
-Now, Open pandora and start a new project
-<br>![Alt Text](imgs/Pandora%20Imgs/NewfilePB.jpg)<br>
-Name your project accordingly
-<br>![Alt Text](imgs/Pandora%20Imgs/Rename.jpg)<br>
-Then, right click your project folder at the left side of the app, and add a new folder. This will be the content folder
-<br>![Alt Text](imgs/Pandora%20Imgs/AddFolder.png)<br>
-To find content, use the navigation tool in the center of the screen, the directory for the downloads folder is (C:/Users/"username"/Downloads), bring in content by dragging content in from the navigation to the previously created content folder.
-<br>![Alt Text](imgs/Pandora%20Imgs/FileDir.png)<br>
-Next, we drag in content from our content to folder directly to our layers.
-<br>![Alt Text](imgs/Pandora%20Imgs/Addimg2Layer.png)<br>
-Then, we position our items in the property editor
-<br>![Alt Text](imgs/Pandora%20Imgs/Positioning.png)<br>
-Next, go to Configuration>Network and check your domain.
-<br>![Alt Text](imgs/Pandora%20Imgs/CheckdomainPB.png)<br>
-Open Server Manager and check if your Media server is connected, if it's not, check your connection between the laptop and the Media Server through your LAN cable. Else, Right click your server in the application and click connect VNC
-<br>![Alt Text](imgs/Pandora%20Imgs/ConnectVNC.png)<br>
-Next, Open Pandoras Box in the Media Server and make sure the domain number matches the one in Pandoras Box in your laptop,
-<br>![Alt Text](imgs/Pandora%20Imgs/Open%20Pandora.png)<br>
-Open Widget Designer and create a new file.
-<br>![Alt Text](imgs/Pandora%20Imgs/FileNew.png)<br>
-Add buttons by going to Widgets>Buttons and clicking CustomScript, this will set you in state where you can only add buttons
-<br>![Alt Text](imgs/Pandora%20Imgs/Addbutton.png)<br>
-Button adding state
-<br>![Alt Text](imgs/Pandora%20Imgs/make%20button.png)<br>
-To exit the button adding state, click the icon selected in the image at the top of the application
-<br>![Alt Text](imgs/Pandora%20Imgs/Esc.jpg)<br>
-At the end, you should have 40 buttons in total
-<br>![Alt Text](imgs/Pandora%20Imgs/Final%20Layout.jpg)<br>
-Double-click the button and change its type to toggle inside Settings and add in codes
-<br>![Alt Text](imgs/Pandora%20Imgs/doubleclick.png)<br>
-
-## The codes to use for buttons are:
-
-### **To toggle the layer's opacity for Player 1**
-Note that X means Device number and Y means layer number
-
-onClick script:
-
-(the portion after changing the opacity is for audio playback)
-```
-DeviceSetParam(X,Y,"Opacity",255)
-DeviceSetParam(X,Y,"Playback Transport","Play")
-WDWait
-(0.5)DeviceSetParam(X,Y,"Playback Transport","Stop")
-```
-
-onRelease script:
-```
-DeviceSetParam(X,Y,"Opacity",0)
-```
-Master script to turn opacity down and release pressed state
-```
-DeviceSetParam(X,Y,"Opacity",0)
-WDCustomScriptSetState(3,"Released")
-```
-
-Next, navigate to Connections>Remoting at the top of the application
-<br>![Alt Text](imgs/Pandora%20Imgs/Remoting.jpg)<br>
-Inside the Remote input control, set your TCP port to 5005 and Enable TCP connection.
-<br>![Alt Text](imgs/Pandora%20Imgs/TCPSet.jpg)<br>
-
-
-## Raspberry Pi
-Download and install raspbian
-![Alt text](<imgs/Raspi Setup/Raspi Setup 1.jpg>)
-Choose the operating system as Raspberry Pi OS (32-bit)
-![Alt text](<imgs/Raspi Setup/Raspi Setup OS.jpg>)
-Choose the storage device, being the SD card that will be used to store data for the Raspberry Pi
-![Alt text](<imgs/Raspi Setup/Raspi Setup Storage.jpg>)
-Pick advanced options, enable hostname and SSH, then enter a hostname of your choosing, in this case, its TeamA2
-![Alt text](<imgs/Raspi Setup/Raspi Setup Advanced 1.jpg>)
-Enable set username and password then create a username and password, in this senario username being TeamA2, password being mtswifipwd
-![Alt text](<imgs/Raspi Setup/Raspi Setup Advanced 2.jpg>)
-Enable Configure wireless LAN and enter the SSID and password according to the SSID and password according what was configured in the netgear router
-![Alt text](<imgs/Raspi Setup/Raspi Setup configure wireless LAN.jpg>)
-Select write
-![Alt text](<imgs/Raspi Setup/Raspi Setup 2.jpg>)
-Note that the SD card will be formatted and everything in it will be erased, do not use a SD card will has data in it
-![Alt text](<imgs/Raspi Setup/Raspi Setup Write Confirmation.jpg>)
-Wait for raspbian to fishing writing
-![Alt text](<imgs/Raspi Setup/Raspi Setup Writing.jpg>)
-Now you can remove the SD card from your laptop and insert it into the raspberry pi
-![Alt text](<imgs/Raspi Setup/Raspi Setup Finished writing.jpg>)
