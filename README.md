@@ -337,5 +337,15 @@ while True:
 
  # Network Settings
 
+
+Login to router
+username: admin
+password: password
+![Alt text](<imgs/Router login.jpg>)
+Name: TeamA\
+Password: mtswifipwd
+![Alt text](<imgs/Router wireless setup.jpg>)
+Router IP address set to 192.168.10.1
+![Alt text](<imgs/Router LAN setup.jpg>)
  # How To Start
 
