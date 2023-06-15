@@ -466,3 +466,10 @@ Wait for raspbian to fishing writing
 ![Alt text](<imgs/Raspi Setup/Raspi Setup Writing.jpg>)
 Now you can remove the SD card from your laptop and insert it into the raspberry pi
 ![Alt text](<imgs/Raspi Setup/Raspi Setup Finished writing.jpg>)
+After the Raspberry Pi finishes starting up, go the command terminal, and type the command "ifconfig" and look for the the ip address of the raspberry pi, in this case being 192.168.10.4  
+Use the command sudo raspi-config and enable VNC
+![Alt text](<imgs/Raspi Setup/Raspi ifconfig.jpg>)
+Download and install VNC viewer, enter the ip address of the raspberry pi
+![Alt text](<imgs/Raspi Setup/VNC 1.jpg>)
+Login to raspberry pi
+![Alt text](<imgs/Raspi Setup/VNC 2.jpg>)
