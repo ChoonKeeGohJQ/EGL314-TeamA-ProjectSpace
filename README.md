@@ -340,8 +340,8 @@ while True:
  # Network Settings
 
 
-Login to router
-username: admin
+Login to router\
+username: admin\
 password: password
 ![Alt text](<imgs/Router login.jpg>)
 Name: TeamA\
