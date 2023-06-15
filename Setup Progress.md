@@ -27,6 +27,9 @@ The bottom layer is unused.
 ## Floor Plan
 ![Floorplan](imgs/floorplan.png)
 
+## Cable Plan
+![Cableplan](imgs/CablePlan.jpg)
+
 # System Diagrams
 ## Video
 ![VideoDiagram](imgs/videodiag.png)
