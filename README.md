@@ -19,7 +19,8 @@ outputport = mido.get_output_names() #get name of device and output port used
 ```
 
 
-#this is a game of tictactoe on a launchpad
+# This is the baseline for Tic Tac Toe on launchpad
+```
 import mido                                                                                                                     
 import socket
 inputport = mido.get_input_names() #get name of device and input port used
@@ -82,8 +83,10 @@ def fill(color):
 #function to clear all pixels        
 def clear(): 
     fill(0)
+```
 
-##draw horizontal line
+## draw horizontal line
+```
 def hline(startpixel,color): 
     spixel = str(startpixel/10) ## line 28 - 31 splits the pad no into x,y cordinate
     yx = spixel.split('.')
@@ -92,8 +95,10 @@ def hline(startpixel,color):
     for x in range(1,9) :        
         pixel(x,y,color)
         x +=1
+```
 
-##draw vertical line
+## draw vertical line
+```
 def vline(startpixel,color): 
     spixel = str(startpixel/10)  ## line 37 - 40 splits the pad no into x,y cordinate
     yx = spixel.split('.')
@@ -101,17 +106,21 @@ def vline(startpixel,color):
     x = int(yx[1])
     for y in range(1,9) :        
         pixel(x,y,color)
-        y +=1
+        y +=
+```
         
-##draw TicTacToe Frame        
+## draw TicTacToe Frame
+```      
 def frame(color): 
     vline(13,color)
     vline(16,color)
     hline(31,color)
     hline(61,color)
     pixel(9,1,10)
+```    
     
-##line 60 - 68 are arrays to show which pixels belong to each button    
+## line 60 - 68 are arrays to show which pixels belong to each button 
+```   
 lb = [11,12,21,22]  
 lm = [41,42,51,52]
 lt = [71,72,81,82]
@@ -154,6 +163,7 @@ pos = [lb,lm,lt,mb,c,mt,rb,rm,rt] ## array to store the arrays for buttons
 index = [0,1,2,3,4,5,6,7,8]  ## array of the index for array 'pos'
 
 btn_state = [0,0,0,0,0,0,0,0,0] ## array for the states of button.
+```
 
 ## fill pixels in the single player box with the stated pos
 def button(sposition,color): 
@@ -168,6 +178,7 @@ def button(sposition,color):
         outport.send(msg)
 
 ## checks which button the player has pressed(pressed @ line 120) and give player color(pcolor @line113)
+```
 def position(spixel,color): 
     u = 0 
     position_i = 0
@@ -300,16 +311,16 @@ while True:
                 DwinCheck(player)
                 if btn_state.count(1) != count :
                     count +=1
-                    
+```
                    
  # Bill Of Material (BOM)
 
- 1. 1x Midi Pad Novation Launchpad
+ 1. 1x Novation Launchpad Mk2
  2. 2x Raspberry Pi Raspi 4 Model B
  3. 1x Short Throw Projector Sony VPL-SW630
  4. 1x Media Server Lenovo ThinkStation P920
  5. 2x Ceiling Speakers Extron FF 220T
- 6. 1x Screen OEM
+ 6. 1x OEM Screen
  7. 1x Audio Amplifier Extron XPA 1002
  8. 1x Laptop HP Zbook 15 G5
  9. 1x HDMI Extender TX Kramer PT-571
@@ -323,3 +334,6 @@ while True:
  3. Dongle for pandora license 
 
  # Network Settings
+
+ # How To Start
+
