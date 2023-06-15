@@ -1,9 +1,5 @@
-# EGL314-TeamA-ProjectSpace
-
-
-
-                   
-  # Bill Of Material (BOM)
+# EGL314-TeamA-ProjectSpace                 
+# Bill Of Material (BOM)
 
  1. 1x Novation Launchpad Mk2
  2. 2x Raspberry Pi Raspi 4 Model B
@@ -191,23 +187,26 @@ Login to raspberry pi
 
 ![Alt text](<imgs/Raspi Setup/VNC 2.jpg>)
 
+
+
 ## Installing neccesary Libraries.
 
-1. Library to use.
--mido
--rtmidi
+### 1. Library to use.
+- mido  
+- rtmidi
 
-2. Open Terminal in Raspberry Pi
-![Alt text](imgs/Raspi/OpenTer.jpg)
-3. Enter command line to install library
+### 2. Open Terminal in Raspberry Pi  
+![Alt text](imgs/Raspi/OpenTer.jpg)  
+
+### 3. Enter command line to install library
 replace pip with whichever version of python you are using.
-if you are using python verion 3 then use 'pip3' instead of pip
+if you are using python verion 3 then use 'pip3' instead of 'pip'
 - install mido library
 'pip install mido'
 - install python-rtmidi
 'pip install python-rtmidi'
 
-4. if installing the library happens to fail, try the following steps.
+### 4. if installing the library happens to fail, try the following steps.
  - Open Raspberry Pi Configuration
  ![Alt text](imgs/Raspi/OpenRaspiConfig.jpg)
  - go to Localisation
@@ -215,9 +214,9 @@ if you are using python verion 3 then use 'pip3' instead of pip
  ![Alt text](imgs/Raspi/RaspiConfigLocalisation.jpg)
 
 ## TicTacToe with TCP(MK2)
-1. Open Thonny in Rapberry Pi
+### 1. Open Thonny in Rapberry Pi
 
-2. Using the code  
+### 2. Using the code  
 - Either import the the 
 [program file](<Game codes/TicTacToeWTCP>) and open in Thonny
 ![Alt text](imgs/Raspi/ThonnyFileOpen.jpg)
