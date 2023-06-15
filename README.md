@@ -198,7 +198,7 @@ Login to raspberry pi
 -rtmidi
 
 2. Open Terminal in Raspberry Pi
-
+![Alt text](imgs/Raspi/OpenTer.jpg)
 3. Enter command line to install library
 replace pip with whichever version of python you are using.
 if you are using python verion 3 then use 'pip3' instead of pip
@@ -209,14 +209,21 @@ if you are using python verion 3 then use 'pip3' instead of pip
 
 4. if installing the library happens to fail, try the following steps.
  - Open Raspberry Pi Configuration
+ ![Alt text](imgs/Raspi/OpenRaspiConfig.jpg)
  - go to Localisation
  - Set Timezone and Wireless LAN Country to your country.
+ ![Alt text](imgs/Raspi/RaspiConfigLocalisation.jpg)
 
-
-## TicTacToe with TCP
+## TicTacToe with TCP(MK2)
 1. Open Thonny in Rapberry Pi
 
-2. Refer to the code below for the TicTacToe game.
+2. Using the code  
+- Either import the the 
+[program file](<Game codes/TicTacToeWTCP>) and open in Thonny
+![Alt text](imgs/Raspi/ThonnyFileOpen.jpg)
+
+- Or insert the code below into a new file in Thonny and save.
+![Alt text](imgs/Raspi/ThonnyPage.jpg)
 ```
 #this is a game of tictactoe on a launchpad
 import mido
