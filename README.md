@@ -341,6 +341,8 @@ Login to router
 </br>
 username: admin
 </br>
+Login to router by going to a web browser and entering address 192.168.1.1 under URL section, then sign in with:\
+username: admin\
 password: password
 ![Alt text](<imgs/Router login.jpg>)
 Name: TeamA
@@ -441,3 +443,26 @@ Next, navigate to Connections>Remoting at the top of the application
 <br>![Alt Text](imgs/Pandora%20Imgs/Remoting.jpg)<br>
 Inside the Remote input control, set your TCP port to 5005 and Enable TCP connection.
 <br>![Alt Text](imgs/Pandora%20Imgs/TCPSet.jpg)<br>
+
+
+## Raspberry Pi
+Download and install raspbian
+![Alt text](<imgs/Raspi Setup/Raspi Setup 1.jpg>)
+Choose the operating system as Raspberry Pi OS (32-bit)
+![Alt text](<imgs/Raspi Setup/Raspi Setup OS.jpg>)
+Choose the storage device, being the SD card that will be used to store data for the Raspberry Pi
+![Alt text](<imgs/Raspi Setup/Raspi Setup Storage.jpg>)
+Pick advanced options, enable hostname and SSH, then enter a hostname of your choosing, in this case, its TeamA2
+![Alt text](<imgs/Raspi Setup/Raspi Setup Advanced 1.jpg>)
+Enable set username and password then create a username and password, in this senario username being TeamA2, password being mtswifipwd
+![Alt text](<imgs/Raspi Setup/Raspi Setup Advanced 2.jpg>)
+Enable Configure wireless LAN and enter the SSID and password according to the SSID and password according what was configured in the netgear router
+![Alt text](<imgs/Raspi Setup/Raspi Setup configure wireless LAN.jpg>)
+Select write
+![Alt text](<imgs/Raspi Setup/Raspi Setup 2.jpg>)
+Note that the SD card will be formatted and everything in it will be erased, do not use a SD card will has data in it
+![Alt text](<imgs/Raspi Setup/Raspi Setup Write Confirmation.jpg>)
+Wait for raspbian to fishing writing
+![Alt text](<imgs/Raspi Setup/Raspi Setup Writing.jpg>)
+Now you can remove the SD card from your laptop and insert it into the raspberry pi
+![Alt text](<imgs/Raspi Setup/Raspi Setup Finished writing.jpg>)
