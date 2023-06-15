@@ -166,6 +166,7 @@ btn_state = [0,0,0,0,0,0,0,0,0] ## array for the states of button.
 ```
 
 ## fill pixels in the single player box with the stated pos
+```
 def button(sposition,color): 
     btn_i =0
     for btn_i in range(len(pos[sposition])):
@@ -176,6 +177,7 @@ def button(sposition,color):
         grid = y*10 +x
         msg = mido.Message('note_on', note=grid, velocity=color)
         outport.send(msg)
+```
 
 ## checks which button the player has pressed(pressed @ line 120) and give player color(pcolor @line113)
 ```
