@@ -13,6 +13,17 @@
 
 ## Storyboard
 
+
+## Rack
+Our Rack consists of 3 layers;
+
+At the top, we have an amplifier that is unused;
+
+In the middle, we have placed a router, amplifier, and HDMI Extenders;
+
+The bottom layer is unused.
+![Rack](imgs/Rack.jpg)
+
 ## Floor Plan
 ![Floorplan](imgs/floorplan.png)
 
@@ -27,14 +38,3 @@
 Reference links : 
 - https://www.youtube.com/watch?v=3QKiK4rJIB0
 - https://www.create-learn.us/blog/easy-games-to-code/
-
-```mermaid
-stateDiagram
-    [*] --> Team_Lead
-    Team_Lead --> [*]
-
-    Team_Lead --> Team_Members
-    Team_Members --> Team_Lead
-    Team_Members --> Track_Own_Tasks
-    Track_Own_Tasks --> [*]
-```
