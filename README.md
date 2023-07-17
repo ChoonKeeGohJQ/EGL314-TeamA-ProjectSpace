@@ -225,14 +225,14 @@ if you are using python verion 3 then use 'pip3' instead of 'pip'
 ![Alt text](imgs/Raspi/ThonnyPage.jpg)
 ```
 #this is a game of tictactoe on a launchpad
-import mido
+import mido                                                                                                                     
 import socket
 inputport = mido.get_input_names() #get name of device and input port used
 outputport = mido.get_output_names() #get name of device and output port used
-launchpad = 'Launchpad MK2 MIDI 1' #name of launchpad
+launchpad = 'Launchpad Pro MK3 LPProMK3 MIDI' #name of launchpad
+
 outport = mido.open_output(launchpad) #open output port for sending commands
 inport = mido.open_input(launchpad) #open input port for receiving feedback
-
 
 TCP_IP='192.168.10.10'
 TCP_PORT=5005
@@ -247,7 +247,10 @@ b"TCPSend(1,'{wdcustomscriptclick(23)}')!",
 b"TCPSend(1,'{wdcustomscriptclick(24)}')!",
 b"TCPSend(1,'{wdcustomscriptclick(25)}')!",
 b"TCPSend(1,'{wdcustomscriptclick(26)}')!",
-b"TCPSend(1,'{wdcustomscriptclick(27)}')!"
+b"TCPSend(1,'{wdcustomscriptclick(27)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(42)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(46)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(48)}')!"
     ]	#Lines for turning off O
 
 B = [
@@ -350,12 +353,24 @@ b"TCPSend(1,'{wdcustomscriptclick(18)}')!"
     ]
 tcp_win_statement = [
 b"TCPSend(1,'{wdcustomscriptclick(37)}')!",
-b"TCPSend(1,'{wdcustomscriptclick(39)}')!" 
-    ]
+b"TCPSend(1,'{wdcustomscriptclick(39)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(49)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(50)}')!" 
 
+    ]
+tcp_player = [
+b"TCPSend(1,'{wdcustomscriptclick(45)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(47)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(46)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(48)}')!" 
+    ]
+tcp_instruction = [
+b"TCPSend(1,'{wdcustomscriptclick(43)}')!",
+b"TCPSend(1,'{wdcustomscriptclick(44)}')!"
+]
 pos = [lb,lm,lt,mb,c,mt,rb,rm,rt] ## array to store the arrays for buttons
 
-index = [0,1,2,3,4,5,6,7,8]  ## array of the index for array 'pos'
+index = [0,1,2,3,4,5,6,7,8]  #array of the index for array 'pos'
 
 btn_state = [0,0,0,0,0,0,0,0,0] ## array for the states of button.
 
@@ -387,8 +402,8 @@ def position(spixel,color):
                         s.send(tcp_btn_p1[u])
                     else:
                         s.send(tcp_btn_p2[u])
-                    position_i = 3
-                    u = 7
+                    position_i = 4
+                    u = 9
                 else:
                     position_i += 1
             u+=1
@@ -408,25 +423,40 @@ def VwinCheck(splayer):
             if (btn_state[4] == 1 and index_color[4] == splayer)and (btn_state[5] == 1 and index_color[5] == splayer):
                 if splayer == 60:
                     s.send(tcp_win_statement[0])
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 else:
                     s.send(tcp_win_statement[1])
-                
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 fill(splayer)
         elif btn_state[0] == 1 and index_color[0] == splayer:
             if (btn_state[1] == 1 and index_color[1] == splayer)and (btn_state[2] == 1 and index_color[2] == splayer):
                 if splayer == 60:
                     s.send(tcp_win_statement[0])
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 else:
                     s.send(tcp_win_statement[1])
-                
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 fill(splayer)
         elif btn_state[6] == 1 and index_color[6] == splayer:
             if (btn_state[7] == 1 and index_color[7] == splayer)and (btn_state[8] == 1 and index_color[8] == splayer):
                 if splayer == 60:
                     s.send(tcp_win_statement[0])
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 else:
                     s.send(tcp_win_statement[1])
-            
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 fill(splayer)
 
 def HwinCheck(splayer):
@@ -435,47 +465,71 @@ def HwinCheck(splayer):
             if (btn_state[wHpixel[i]+3] == 1 and index_color[i+3] == splayer)and (btn_state[wHpixel[i]+6] == 1 and index_color[i+6] == splayer):
                 if splayer == 60:
                     s.send(tcp_win_statement[0])
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 else:
                     s.send(tcp_win_statement[1])
+                    s.send(tcp_win_statement[3])
+                    s.send(tcp_player[2])
+                    s.send(tcp_player[3])
                 fill(splayer)
 def DwinCheck(splayer):
     if btn_state[0] == 1 and index_color[0] == splayer:
         if (btn_state[4] == 1 and index_color[4] == splayer)and (btn_state[8] == 1 and index_color[8] == splayer):
             if splayer == 60:
                 s.send(tcp_win_statement[0])
+                s.send(tcp_win_statement[3])
+                s.send(tcp_player[2])
+                s.send(tcp_player[3])
             else:
                 s.send(tcp_win_statement[1])
+                s.send(tcp_win_statement[3])
+                s.send(tcp_player[2])
+                s.send(tcp_player[3])
             fill(splayer)
     elif btn_state[2] == 1 and index_color[2] == splayer:
         if (btn_state[4] == 1 and index_color[4] == splayer)and (btn_state[6] == 1 and index_color[6] == splayer):
             if splayer == 60:
                 s.send(tcp_win_statement[0])
+                s.send(tcp_win_statement[3])
+                s.send(tcp_player[2])
+                s.send(tcp_player[3])
             else:
                 s.send(tcp_win_statement[1])
+                s.send(tcp_win_statement[3])
+                s.send(tcp_player[2])
+                s.send(tcp_player[3])
             fill(splayer)
 while True:
     count = 0
     print('GAME STARTO!')
+    s.send(tcp_instruction[0])
+    s.send(tcp_win_statement[2])
     for x in A:
         s.send(x)	#Turns all O off
-        
     for x in B:
         s.send(x)	#Turns all X off   
-        
     for x in C:
         s.send(x)	#Turns all winner signs off
+    
     while count <10:
+        
         inport = mido.open_input(launchpad)
-        print(inport)
         nte = inport.receive()
         pressed = nte.note
+        print(pressed)
         inport.close()
-        if pressed == 19:
+        if pressed == 16:
             clear()
             frame(50)
             count = 0
             btn_state = [0,0,0,0,0,0,0,0,0]
             index_color = [0,0,0,0,0,0,0,0,0]
+            s.send(tcp_instruction[0])
+            s.send(tcp_win_statement[2])
+            s.send(tcp_player[0])
+            s.send(tcp_player[3])
             for x in A:
                 s.send(x)	#Turns all O off
                 
@@ -485,20 +539,25 @@ while True:
             for x in C:
                 s.send(x)	#Turns all winner signs off
             print('note pressed is : ' + str(pressed))
-        elif pressed != 19 and nte.velocity == 127:
+        elif pressed != 16 and nte.velocity > 0:
             if count%2 == 0:
                 player = pcolor[0]
                 position(pressed,player)
                 data=s.recv(BUFFER_SIZE)
+                s.send(tcp_player[1])
+                s.send(tcp_player[2])
                 VwinCheck(player)
                 HwinCheck(player)
                 DwinCheck(player)
+                s.send(tcp_instruction[1])
                 if btn_state.count(1) != count :
                     count +=1
             elif count%2 == 1:
                 player = pcolor[1]
                 position(pressed,pcolor[1])
                 data=s.recv(BUFFER_SIZE)
+                s.send(tcp_player[0])
+                s.send(tcp_player[3])
                 VwinCheck(player)
                 HwinCheck(player)
                 DwinCheck(player)
