@@ -12,6 +12,9 @@
  9. 1x HDMI Extender TX Kramer PT-571
  10. 1x HDMI Extender RX Kramer PT-572+
  11. 1x Wireless Router Netgear
+ 12. 1x LED Strips
+ 13. 1x Artnet/DMX Node 1 Eurolite
+ 14. 1x FTP3 RGB LED DMX Driver
 
  # Required Software and Licenses
 
@@ -564,3 +567,84 @@ while True:
                 if btn_state.count(1) != count :
                     count +=1
 ```
+## Lighting Set Up (Hardware)
+
+Our set up for lighting consist of LED Strips, Artnet/DMX Node, DMX Driver and laptop. This is how the set up look like:
+
+![Alt Text](imgs/lighting%20set%20up/setup.jpg)
+
+The laptop is connected to the Artnet via LAN cable. 
+
+
+The Artnet is then connected to the DMX driver via DMX to Terminal Block cable as a DMX output, making the driver as DMX Input. The power is connected to DC Input via terminal block. The LED Strips are connected to the driver's output accroding to the RGB colours.
+
+![Alt Text](imgs/lighting%20set%20up/dmxdriver.jpg)
+
+On the Artnet, the output is set as DMX
+
+![Alt Text](imgs/lighting%20set%20up/artnet.jpg)
+
+The IP Address on the Artnet is set to 2.0.0.3 and the subnet is 255.0.0.0 as the Artnet only supports Class A IP Address. The universe is set to 1.
+
+![Alt Text](imgs/lighting%20set%20up/ip0.jpg)
+![Alt Text](imgs/lighting%20set%20up/ip1.jpg)
+![Alt Text](imgs/lighting%20set%20up/ip2.jpg)
+![Alt Text](imgs/lighting%20set%20up/ip3.jpg)
+![Alt Text](imgs/lighting%20set%20up/sw0.jpg)
+![Alt Text](imgs/lighting%20set%20up/sw1.jpg)
+![Alt Text](imgs/lighting%20set%20up/sw2.jpg)
+![Alt Text](imgs/lighting%20set%20up/sw3.jpg)
+![Alt Text](imgs/lighting%20set%20up/universe.jpg)
+
+The LED Strips are hang around the truss
+
+![Alt Text](imgs/lighting%20set%20up/light.jpg)
+![Alt Text](imgs/lighting%20set%20up/light2.jpg)
+![Alt Text](imgs/lighting%20set%20up/light3.jpg)
+![Alt Text](imgs/lighting%20set%20up/light5.jpg)
+
+## Lighting Up LED (Software)
+
+We used Pandora Box and Widget Designer to control the lights.
+We need to check that the LAN cable IP address is in Class A IP to match with the IP Adrress on the Artnet. 
+
+To do that, right click on the Wifi Logo and go to Open Network & Internet Settings
+
+![Alt Text](imgs/Pandora%20Imgs/Open%20network%20settings.png)
+
+Go to Change Adapter Options
+
+![Alt Text](imgs/Pandora%20Imgs/Change%20Adapter%20Settings.png)
+
+Right click on Ethernet 3 and go to properties
+
+![Alt Text](imgs/Pandora%20Imgs/ethernet3.jpg)
+
+The Ethernet 3 properties page will appear. 
+
+Click on Internet Protocol Version 4 (TCP/IPv4) and go to properties
+
+![Alt Text](imgs/Pandora%20Imgs/ethernetproperties.png)
+
+The properties page will appear and make sure the ip address is in Class A with the correct subnet, make changes if needed.
+
+![Alt Text](imgs/Pandora%20Imgs/ipsettings.png)
+
+On Pandora, we add in a device for LED Strips and did patching to on the lights.
+
+Under Tabs, go to Device Types
+
+![Alt Text](imgs/Pandora%20Imgs/devicetype2.jpg)
+
+This tab will appear. Afterwards go to DMX Fixtures
+
+![Alt Text](imgs/Pandora%20Imgs/devicetype.png)
+
+Under the DMX Fixture, go to the _GENERIC file. Under the _GENERIC file, select _GENERIC@RGB 3ch.clib
+
+![Alt Text](imgs/Pandora%20Imgs/dmxfixture.png)
+
+Drag the file to the device tab
+
+![Alt Text](imgs/Pandora%20Imgs/devicetab.png)
+
