@@ -576,9 +576,7 @@ Our set up for lighting consist of LED Strips, Artnet/DMX Node, DMX Driver and l
 The laptop is connected to the Artnet via LAN cable. 
 
 
-The Artnet is then connected to the DMX driver via DMX to Terminal Block cable as a DMX output, making the driver as DMX Input. The power is connected to DC Input via terminal block. The LED Strips are connected to the driver's output accroding to the RGB colours.
-
-![Alt Text](imgs/lighting%20set%20up/dmxdriver.jpg)
+The Artnet is then connected to the DMX driver via DMX to Terminal Block cable as a DMX output, making the driver as DMX Input. 
 
 On the Artnet, the output is set as DMX
 
@@ -596,12 +594,20 @@ The IP Address on the Artnet is set to 2.0.0.3 and the subnet is 255.0.0.0 as th
 ![Alt Text](imgs/lighting%20set%20up/sw3.jpg)
 ![Alt Text](imgs/lighting%20set%20up/universe.jpg)
 
+The LED Strips are connected to the driver's output accroding to the RGB colours. The power is connected to DC Input via terminal block. 
+
+On the DMX Driver, the start address is set to 1. 
+
+Since we are using DMX output, the seetings are set accroding to the settings shown on the driver for the DMX Mode.
+
+![Alt Text](imgs/lighting%20set%20up/dmxdriver.jpg)
+
 The LED Strips are hang around the truss
 
-![Alt Text](imgs/lighting%20set%20up/light.jpg)
+![Alt Text](imgs/lighting%20set%20up/light1.jpg)
 ![Alt Text](imgs/lighting%20set%20up/light2.jpg)
 ![Alt Text](imgs/lighting%20set%20up/light3.jpg)
-![Alt Text](imgs/lighting%20set%20up/light5.jpg)
+
 
 ## Lighting Up LED (Software)
 
@@ -618,7 +624,7 @@ Go to Change Adapter Options
 
 Right click on Ethernet 3 and go to properties
 
-![Alt Text](imgs/Pandora%20Imgs/ethernet3.jpg)
+![Alt Text](imgs/Pandora%20Imgs/ethernet3.png)
 
 The Ethernet 3 properties page will appear. 
 
@@ -630,13 +636,15 @@ The properties page will appear and make sure the ip address is in Class A with 
 
 ![Alt Text](imgs/Pandora%20Imgs/ipsettings.png)
 
-On Pandora, we add in a device for LED Strips and did patching to on the lights.
+On Pandora, we add in a device for LED Strips and patching the lights.
+
+To add in a device:
 
 Under Tabs, go to Device Types
 
-![Alt Text](imgs/Pandora%20Imgs/devicetype2.jpg)
+![Alt Text](imgs/Pandora%20Imgs/devicetype2.png)
 
-This tab will appear. Afterwards go to DMX Fixtures
+This device window will appear. Afterwards go to DMX Fixtures
 
 ![Alt Text](imgs/Pandora%20Imgs/devicetype.png)
 
@@ -648,3 +656,32 @@ Drag the file to the device tab
 
 ![Alt Text](imgs/Pandora%20Imgs/devicetab.png)
 
+For patching:
+
+Right click on the layer _GENERIC@RGB 3ch and go to Patch and click on Reveal in Patch Tab
+
+![Alt Text](imgs/Pandora%20Imgs/revealpatchtab.png)
+
+The patch window will appear.
+
+![Alt Text](imgs/Pandora%20Imgs/patchwindow.png)
+
+If it doesn't show any text box for DMX and universe in the patch window, right click on the layer _GENERIC@RGB 3ch and go to Patch and click on Set Patch Start Values
+
+![Alt Text](imgs/Pandora%20Imgs/setpatch.png)
+
+It will show the page for the start address and universe
+
+![Alt Text](imgs/Pandora%20Imgs/autopatch.png)
+
+Another way to do this is to go to Tabs and click on Patch
+
+![Alt Text](imgs/Pandora%20Imgs/patchtab.png)
+
+It will also show the same page as this
+
+![Alt Text](imgs/Pandora%20Imgs/patchwindow.png)
+
+In the patch window, tick the check box under patch. The channel will state 3 as there are 3 channels. Since we set our start address and universe 1 on the DMX driver and Artnet respectively, it is stated as 1 in Pandora.
+
+![Alt Text](imgs/Pandora%20Imgs/patchdetails.png)
