@@ -682,6 +682,18 @@ It will also show the same page as this
 
 ![Alt Text](imgs/Pandora%20Imgs/patchwindow.png)
 
-In the patch window, tick the check box under patch. The channel will state 3 as there are 3 channels. Since we set our start address and universe 1 on the DMX driver and Artnet respectively, it is stated as 1 in Pandora.
+In the patch window, tick the check box under patch. The channel will state 3 as there are 3 channels. Since we set our start address and universe 1 on the DMX driver and Artnet respectively, it is stated as 1 in Pandora. 
 
 ![Alt Text](imgs/Pandora%20Imgs/patchdetails.png)
+
+Afterwards, we have to activiate ARTNET on PB Manager.
+
+To do this:
+
+Go to the configuration tab, then go to Remote Control Protocols.
+
+Make sure to put the correct Network Adapter under Preferred Network Adapter. 
+
+Afterwards click on Acitivate Output under Art-Net to activate the Artnet Output.
+
+![Alt Text](imgs/Pandora%20Imgs/PBConfiguration.png)
