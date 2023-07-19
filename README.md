@@ -697,3 +697,25 @@ Make sure to put the correct Network Adapter under Preferred Network Adapter.
 Afterwards click on Acitivate Output under Art-Net to activate the Artnet Output.
 
 ![Alt Text](imgs/Pandora%20Imgs/PBConfiguration.png)
+
+Afterwards, pull the fader up to turn on the lights
+
+![Alt Text](imgs/Pandora%20Imgs/fader.png)
+
+The cues are on the timeline to save different effects for when players play the tic tac toe game
+
+In the timeline:
+
+Cue 1 is added to turn on red light when it is Player 1's turn.
+
+Cue 2 is added to turn on blue light when it is Player 2's turn.
+
+Cue 3 is added to flash red lights when Player 1 wins.
+
+Cue 5 is added to flash blue lights when Player 2 wins.
+
+![Alt Text](imgs/Pandora%20Imgs/lightingcues.png)
+
+On the widget designer, buttons are created to control the different lighting effects programmed on the Pandora Box Timeline.
+
+![Alt Text](imgs/Pandora%20Imgs/widget.png)
