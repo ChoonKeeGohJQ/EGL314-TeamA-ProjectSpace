@@ -719,3 +719,102 @@ Cue 5 is added to flash blue lights when Player 2 wins.
 On the widget designer, buttons are created to control the different lighting effects programmed on the Pandora Box Timeline.
 
 ![Alt Text](imgs/Pandora%20Imgs/widget.png)
+
+## Control Setup
+
+To Program a control interface with Cretron, 3 softwares are required.
+
+</br>
+
+The first software being Toolbox 
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 01.jpg>)
+
+Ensure that a connection is established with the processor, be it wired or wireless.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 02.jpg>)
+
+In Crestron Toolbox, click on the address book icon
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 05.jpg>)
+
+If it is the first time connecting to the processor, use a USB connection to find out the IP address on the processor.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 03.jpg>)
+
+After connection is established, ethernet settings to change the default IP address to one with the same subnet as your station, in our case, it's 10.
+
+![Alt text](<imgs/Crestron Config/Crestron Config 07.jpg>)
+
+![Alt text](<imgs/Crestron Config/Crestron Config 08.jpg>)
+
+A TCP connection can be substituted for the USB connection.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 04.jpg>)
+
+Ensure that it shows that you are connected.
+
+![Alt text](<imgs/Crestron Config/Crestron Config 06.jpg>)
+
+You can follow up with opening the VisionTools Pro e application.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 19.jpg>)
+
+Create a new project file and follow up by designing the GUI.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 10.jpg>)
+
+![Alt text](<imgs/Crestron Config/Crestron Config 11.jpg>)
+
+After designing the GUI and setting the visibility digital join in VisionTools Pro e and compile the project, you can start programming the connection on SIMPL windows.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 20.jpg>)
+
+In SIMPL Windows, create a new module and enter all program header infomation. 
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 12.jpg>)
+
+![Alt text](<imgs/Crestron Config/Crestron Config 13.jpg>)
+
+In the configure page, search for the processor module under control systems, X panel windows under Touchpanel and TCP/IP client under Ethernet Control Modules in Device directories
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 14.jpg>)
+
+![Alt text](<imgs/Crestron Config/Crestron Config 22.jpg>)
+
+![Alt text](<imgs/Crestron Config/Crestron Config 23.jpg>)
+
+In the program page, program the connection between touchpanel and the devices using drivers.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 15.jpg>)
+
+If the drivers for the devices are not available in the symbol libary, it can be aquired from the Crestron application market.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 17.jpg>)
+
+Once you finish programming all the connections, you can compile and send the program to your touchpanel.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 16.jpg>)
+
+Return to VisionTools pro e to open your xpanel with the play button.
+</br>
+
+![Alt text](<imgs/Crestron Config/Crestron Config 18.jpg>)
+
+Xpanel will appear and can be used as the control your devices.
+
+![Alt text](<imgs/Crestron Config/Crestron Config 21.jpg>)
+
