@@ -701,7 +701,7 @@ Afterwards, pull the fader up to turn on the lights
 
 ![Alt Text](imgs/Pandora%20Imgs/fader.png)
 
-The cues are on the timeline to save different effects for when players play the tic tac toe game
+Cues are created on the timeline to have different effects for when players play the tic tac toe game.
 
 In the timeline:
 
