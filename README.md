@@ -602,12 +602,9 @@ Since we are using DMX output, the seetings are set accroding to the settings sh
 
 ![Alt Text](imgs/lighting%20set%20up/dmxdriver.jpg)
 
-The LED Strips are hang around the truss
+The LED Strips are hang around the table where players sit at to play the Tic Tac Toe game.
 
-![Alt Text](imgs/lighting%20set%20up/light1.jpg)
-![Alt Text](imgs/lighting%20set%20up/light2.jpg)
-![Alt Text](imgs/lighting%20set%20up/light3.jpg)
-
+![Alt Text](imgs/lighting%20set%20up/light.jpg)
 
 ## Lighting Up LED (Software)
 
@@ -719,6 +716,16 @@ Cue 5 is added to flash blue lights when Player 2 wins.
 On the widget designer, buttons are created to control the different lighting effects programmed on the Pandora Box Timeline.
 
 ![Alt Text](imgs/Pandora%20Imgs/widget.png)
+
+During the round of Tic Tac Toe, the lights will either flash red or blue respectively accroding to the players. 
+
+If it's Player 1's turn, the lights will turn red.
+
+If it's Player 2's turn, the lights will turn blue.
+
+For the winning statement, the lights will flash red if Player 1 wins.
+
+It will flash blue lights if Player 2 wins.
 
 ## Control Setup
 
