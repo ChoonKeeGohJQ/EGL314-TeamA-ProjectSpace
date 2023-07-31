@@ -23,10 +23,12 @@
  3. Server Manager 
  4. Thonny Python IDE
  5. Dongles for Pandora license
+ 6. Toolbox
+ 7. VisionTools Pro-e
+ 8. SIMPL Windows
 
  # Network Settings
-
-
+ 
 Login to router
 </br>
 username: admin
