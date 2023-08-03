@@ -723,21 +723,13 @@ When players are playing Tic Tac Toe, the lights will light up either red or blu
 
 In this case if it is Player 1's turn, the lights will turn on red.
 
-<video src="Demo%20Video/lighting/player1turn.mp4" controls title="Player1Turn"></video>
-
 If it is Player 2's turn, the lights will turn on blue.
-
-<video src="Demo%20Video/lighting/player2turn.mp4" controls title="Player2Turn"></video>
 
 For the winning statement, the lights will either flash red or blue lights depending on which player wins. 
 
 In this case if Player 1 wins, the lights will flash red lights 
 
-<video src="Demo%20Video/lighting/player1wins.mp4" controls title="Player1Wins"></video>
-
 If Player 2 wins, the lights will flash blue lights.
-
-<video src="Demo%20Video/lighting/player2wins.mp4" controls title="Player2Wins"></video>
 
 ## Control Setup
 
