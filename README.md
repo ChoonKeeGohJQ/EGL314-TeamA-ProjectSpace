@@ -721,15 +721,11 @@ On the widget designer, buttons are created to control the different lighting ef
 
 When players are playing Tic Tac Toe, the lights will light up either red or blue accroding to the player's turn. 
 
-In this case if it is Player 1's turn, the lights will turn on red.
-
-If it is Player 2's turn, the lights will turn on blue.
+In this case if it is Player 1's turn, the lights will turn on red. If it is Player 2's turn, the lights will turn on blue.
 
 For the winning statement, the lights will either flash red or blue lights depending on which player wins. 
 
-In this case if Player 1 wins, the lights will flash red lights 
-
-If Player 2 wins, the lights will flash blue lights.
+In this case if Player 1 wins, the lights will flash red lights. If Player 2 wins, the lights will flash blue lights.
 
 ## Control Setup
 
