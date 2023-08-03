@@ -596,24 +596,24 @@ The IP Address on the Artnet is set to 2.0.0.3 and the subnet is 255.0.0.0 as th
 ![Alt Text](imgs/lighting%20set%20up/sw3.jpg)
 ![Alt Text](imgs/lighting%20set%20up/universe.jpg)
 
-The LED Strips are connected to the driver's output according to the RGB colours. The power is connected to DC Input via the terminal block. 
+The LED Strips are connected to the driver's output accroding to the RGB colours. The power is connected to DC Input via terminal block. 
 
 On the DMX Driver, the start address is set to 1. 
 
-Since we are using DMX output, the settings are set according to the settings shown on the driver for the DMX Mode.
+Since we are using DMX output, the seetings are set accroding to the settings shown on the driver for the DMX Mode.
 
 ![Alt Text](imgs/lighting%20set%20up/dmxdriver.jpg)
 
-The LED Strips are hung around the table where players sit to play the Tic Tac Toe game.
+The LED Strips are hang around the table where players sit at to play the Tic Tac Toe game.
 
 ![Alt Text](imgs/lighting%20set%20up/light.jpg)
 
 ## Lighting Up LED (Software)
 
 We used Pandora Box and Widget Designer to control the lights.
-We need to check that the LAN cable IP address is in Class A IP to match with the IP Address on the Artnet. 
+We need to check that the LAN cable IP address is in Class A IP to match with the IP Adrress on the Artnet. 
 
-To do that, right-click on the Wifi Logo and go to Open Network & Internet Settings
+To do that, right click on the Wifi Logo and go to Open Network & Internet Settings
 
 ![Alt Text](imgs/Pandora%20Imgs/Open%20network%20settings.png)
 
@@ -621,17 +621,17 @@ Go to Change Adapter Options
 
 ![Alt Text](imgs/Pandora%20Imgs/Change%20Adapter%20Settings.png)
 
-Right-click on Ethernet 3 and go to properties
+Right click on Ethernet 3 and go to properties
 
 ![Alt Text](imgs/Pandora%20Imgs/ethernet3.png)
 
 The Ethernet 3 properties page will appear. 
 
-Click on Internet Protocol Version 4 (TCP/IPv4) and go to the properties
+Click on Internet Protocol Version 4 (TCP/IPv4) and go to properties
 
 ![Alt Text](imgs/Pandora%20Imgs/ethernetproperties.png)
 
-The properties page will appear and make sure the IP address is in Class A with the correct subnet, make changes if needed.
+The properties page will appear and make sure the ip address is in Class A with the correct subnet, make changes if needed.
 
 ![Alt Text](imgs/Pandora%20Imgs/ipsettings.png)
 
@@ -643,7 +643,7 @@ Under Tabs, go to Device Types
 
 ![Alt Text](imgs/Pandora%20Imgs/devicetype2.png)
 
-This device window will appear. Afterwards, go to DMX Fixtures
+This device window will appear. Afterwards go to DMX Fixtures
 
 ![Alt Text](imgs/Pandora%20Imgs/devicetype.png)
 
@@ -657,7 +657,7 @@ Drag the file to the device tab
 
 For patching:
 
-Right-click on the layer _GENERIC@RGB 3ch and go to Patch and click on Reveal in Patch Tab
+Right click on the layer _GENERIC@RGB 3ch and go to Patch and click on Reveal in Patch Tab
 
 ![Alt Text](imgs/Pandora%20Imgs/revealpatchtab.png)
 
@@ -681,11 +681,11 @@ It will also show the same page as this
 
 ![Alt Text](imgs/Pandora%20Imgs/patchwindow.png)
 
-In the patch window, tick the check box under the patch. The channel will state 3 as there are 3 channels. Since we set our start address and universe 1 on the DMX driver and Artnet respectively, it is stated as 1 in Pandora. 
+In the patch window, tick the check box under patch. The channel will state 3 as there are 3 channels. Since we set our start address and universe 1 on the DMX driver and Artnet respectively, it is stated as 1 in Pandora. 
 
 ![Alt Text](imgs/Pandora%20Imgs/patchdetails.png)
 
-Afterwards, we have to activate ARTNET on PB Manager.
+Afterwards, we have to activiate ARTNET on PB Manager.
 
 To do this:
 
@@ -693,11 +693,11 @@ Go to the configuration tab, then go to Remote Control Protocols.
 
 Make sure to put the correct Network Adapter under Preferred Network Adapter. 
 
-Afterward, click on Activate Output under Art-Net to activate the Artnet Output.
+Afterwards click on Acitivate Output under Art-Net to activate the Artnet Output.
 
 ![Alt Text](imgs/Pandora%20Imgs/PBConfiguration.png)
 
-Afterward, pull the fader up to turn on the lights
+Afterwards, pull the fader up to turn on the lights
 
 ![Alt Text](imgs/Pandora%20Imgs/fader.png)
 
@@ -719,17 +719,25 @@ On the widget designer, buttons are created to control the different lighting ef
 
 ![Alt Text](imgs/Pandora%20Imgs/widget.png)
 
-When players are playing Tic Tac Toe, the lights will light up either red or blue according to the player's turn. 
+When players are playing Tic Tac Toe, the lights will light up either red or blue accroding to the player's turn. 
 
-In this case, if it is Player 1's turn, the lights will turn on red.
+In this case if it is Player 1's turn, the lights will turn on red.
+
+<video src="Demo%20Video/lighting/player1turn.mp4" controls title="Player1Turn"></video>
 
 If it is Player 2's turn, the lights will turn on blue.
+
+<video src="Demo%20Video/lighting/player2turn.mp4" controls title="Player2Turn"></video>
 
 For the winning statement, the lights will either flash red or blue lights depending on which player wins. 
 
 In this case if Player 1 wins, the lights will flash red lights 
 
+<video src="Demo%20Video/lighting/player1wins.mp4" controls title="Player1Wins"></video>
+
 If Player 2 wins, the lights will flash blue lights.
+
+<video src="Demo%20Video/lighting/player2wins.mp4" controls title="Player2Wins"></video>
 
 ## Control Setup
 
