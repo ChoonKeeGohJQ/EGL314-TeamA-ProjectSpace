@@ -719,7 +719,7 @@ On the widget designer, buttons are created to control the different lighting ef
 
 ![Alt Text](imgs/Pandora%20Imgs/widget.png)
 
-When players are playing Tic Tac Toe, the lights will light up either red or blue accroding to the player's turn. 
+When players are playing, the lights will light up either red or blue accroding to the player's turn. 
 
 In this case if it is Player 1's turn, the lights will turn on red. If it is Player 2's turn, the lights will turn on blue.
 
