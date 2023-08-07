@@ -604,7 +604,7 @@ Since we are using DMX output, the seetings are set accroding to the settings sh
 
 ![Alt Text](imgs/lighting%20set%20up/dmxdriver.jpg)
 
-The LED Strips are hang around the table where players sit at to play the Tic Tac Toe game.
+The LED Strips are hang around the table where players sit at to play games.
 
 ![Alt Text](imgs/lighting%20set%20up/light.jpg)
 
